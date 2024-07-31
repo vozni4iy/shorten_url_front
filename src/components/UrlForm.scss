@@ -1,0 +1,46 @@
+@import '../styles/variables';
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+
+  input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid $primary-color;
+    border-radius: 4px;
+  }
+
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    button {
+      padding: 10px;
+      background-color: $primary-color;
+      color: $secondary-color;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &.short-url-button {
+        flex: 1;
+      }
+
+      &.clear-button {
+        background-color: $clear-button-bg;
+      }
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+
+      &.clear-button:hover {
+        background-color: darken($clear-button-bg, 10%);
+      }
+    }
+  }
+}
